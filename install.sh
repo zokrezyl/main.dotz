@@ -65,7 +65,7 @@ install() {
     install_component --link /home/misi/.zshrc
     install_component --link /home/misi/.config/nvim
     install_component --link /home/misi/.tmux.conf
-    install_component --link /home/misi/.ion3
+    install_component --link /home/misi/.notion
     
     install_ohmyzsh
 }
