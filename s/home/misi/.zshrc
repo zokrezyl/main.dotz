@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/g/ext/ohmyzsh
+export ZSH=/home/misi/.config/main.dotz/r/ohmyzsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -65,7 +65,7 @@ COMPLETION_WAITING_DOTS="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=/gs/main.dotz/s/m.t/home/misi/.ohmyzsh
+ZSH_CUSTOM=/home/misi/.config/main.dotz/s/home/misi/.ohmyzsh
 
 export FZF_BASE=/g/ext/fzf/
 
@@ -74,7 +74,7 @@ export FZF_BASE=/g/ext/fzf/
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(adb colorize command-not-found compleat copybuffer dotenv fzf git)
+plugins=(adb colorize command-not-found compleat copybuffer dotenv fzf git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
