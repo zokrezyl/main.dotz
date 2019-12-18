@@ -74,7 +74,7 @@ export FZF_BASE=/g/ext/fzf/
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(adb colorize command-not-found compleat copybuffer dotenv fzf git vi-mode)
+plugins=(adb colorize command-not-found compleat copybuffer dotenv fzf git vi-mode fzf-misc fzf-fasd)
 
 source $ZSH/oh-my-zsh.sh
 
