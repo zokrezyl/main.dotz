@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
+set -x
 
 
 trap 'catch' ERR
@@ -10,7 +11,8 @@ catch() {
 
 install_dir=$HOME/.config/main.dotz
 install_dir_b_t=$install_dir/s/b.t #install dir for basic stuff
-src_home_dir_b_t=s/b.t/HOME
+src_home_dir=$(dirname $(realpath $0))
+src_home_dir_b_t=$src_home_dir/s/b.t/HOME
 
 install_component() {
 
