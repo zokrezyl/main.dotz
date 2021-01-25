@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.config/main.dotz/s/b.t/.ohmyzsh
+export ZSH=$HOME/.config/main.dotz/s/b.t/ohmyzsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -65,7 +65,7 @@ COMPLETION_WAITING_DOTS="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$HOME/.config/main.dotz/s/b.t/home/misi/.ohmyzsh
+ZSH_CUSTOM=$HOME/.ohmyzsh
 
 export FZF_BASE=/g/ext/fzf/
 
