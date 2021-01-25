@@ -10,6 +10,7 @@ catch() {
 
 install_dir=$HOME/.config/main.dotz
 install_dir_b_t=$install_dir/s/b.t #install dir for basic stuff
+src_home_dir_b_t=s/b.t/HOME
 
 install_component() {
 
@@ -31,15 +32,15 @@ install_component() {
     done
 
     echo "installing $what"
-    mkdir -p $install_dir_b_t$(dirname $what)
-    cp -r s/b.t$what $install_dir_b_t$what
+    what_dirname=$(dirname $what)
+    echo "what_dirname: $what_dirname"
+    [ "$what_dirname" == "." ] || mkdir -p $install_dir_b_t/$what_dirname
+    cp -r $src_home_dir_b_t/$what $install_dir_b_t/$what
 
-    [ -f $what ] && rm $what
-
-    
     if [ $link -eq 1 ]; then
-	echo "creating symlink ln -s $install_dir_b_t$what $what"
-        ln -s $install_dir_b_t$what $what
+	    echo "creating symlink ln -s $install_dir_b_t$what $what"
+        [ -L $HOME/$what ] && rm $HOME/$what
+        ln -s $install_dir_b_t/$what $HOME/$what
 	
     fi
 
@@ -65,14 +66,14 @@ install_ohmyzsh() {
     unzip -q $install_dir_b_t/$ohmyzsh_commit -d $install_dir_b_t
 
     mv $install_dir_b_t/ohmyzsh-$ohmyzsh_commit $install_dir_b_t/ohmyzsh
-    install_component --link $HOME/.ohmyzsh
+    install_component --link .ohmyzsh
 
 }
 install() {
-    install_component --link $HOME/.zshrc
-    install_component --link $HOME/.config/nvim
-    install_component --link $HOME/.tmux.conf
-    install_component --link $HOME/.notion
+    install_component --link .zshrc
+    install_component --link .config/nvim
+    install_component --link .tmux.conf
+    install_component --link .notion
     
     install_ohmyzsh
 }
